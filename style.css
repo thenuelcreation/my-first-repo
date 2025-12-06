@@ -1,0 +1,165 @@
+/* ===== GLOBAL PAGE STYLE ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f2f2f7;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Page container to center content */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  text-align: center;
+  color: #b22222;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #444;
+  margin-top: 30px;
+  border-left: 6px solid #b22222;
+  padding-left: 12px;
+}
+
+/* ===== IMAGE ===== */
+img {
+  width: 300px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 4px solid #b22222;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FLEXBOX FOR DETAILS LIST ===== */
+.details-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-list li {
+  list-style: none;
+  background: #f8d7da;
+  color: #7b1113;
+  padding: 10px 15px;
+  border-radius: 6px;
+  flex: 1 1 calc(50% - 10px);
+  font-weight: bold;
+}
+
+/* ===== REGULAR LISTS ===== */
+ul,
+ol {
+  background: #ffffff;
+  padding: 18px 25px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+li {
+  margin: 8px 0;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #b22222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tips paragraph */
+p {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* ========== SMALL PHONES (Below 480px) ========== */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .details-list li {
+    flex: 1 1 100%; /* Makes each detail full width on small screens */
+  }
+}
+
+/* ========== REGULAR PHONES (481px – 767px) ========== */
+@media (max-width: 767px) {
+  body {
+    padding: 15px;
+  }
+
+  img {
+    width: 90%;
+  }
+
+  .details-list {
+    gap: 10px;
+  }
+
+  .details-list li {
+    flex: 1 1 48%; /* Two items per row */
+  }
+}
+
+/* ========== TABLETS (768px – 1024px) ========== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  img {
+    width: 70%;
+  }
+}
+
+/* ========== LARGE SCREENS (DESKTOP) ========== */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 900px;
+  }
+}
