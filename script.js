@@ -5,34 +5,34 @@ function registerUser() {
 
   if (fullName.length < 3) {
     alert("Full Name must be at least 3 characters long.");
-    return;
+    fullName = prompt("Enter your username:");
   }
 
   let email = prompt("Enter your email:");
   if (!email.includes("@")) {
     alert("Please enter a valid email address.");
-    return;
+    email = prompt("Enter your email:");
   }
 
   let password = prompt("Enter your password:");
   while (!password || password.length < 8) {
     alert("Password must at least be 8 characters long.");
-    return;
+    password = prompt("Enter your password:");
   }
 
   let confirmPassword = prompt("Confirm your password:");
   while (confirmPassword !== password) {
     alert("Password do not match. Try Again.");
-    return;
+    confirmPassword = prompt("Confirm your password:");
   }
 
   let age = prompt("Enter your age:");
   while (isNaN(age) || age < 18) {
     alert("You must be 18 years or older.");
-    return;
+    age = prompt("Enter your age:");
   }
-}
 
-alert("Registration Successful!");
+  alert("Registration Successful!");
+}
 
 registerUser();
